@@ -2,3 +2,7 @@ spring:
   test:
     database:
       replace: any
+  datasource:
+    url: "jdbc:h2:mem:"
+    username: sa
+    password:
