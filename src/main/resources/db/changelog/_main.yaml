@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - includeAll:
+      errorIfMissingOrEmpty: false
+      path: "db/changelog/v*.yaml"

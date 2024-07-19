@@ -17,3 +17,7 @@ spring:
     generate-ddl: false
     hibernate:
       ddl-auto: validate
+  liquibase:
+    change-log: "classpath:db/changelog/_main.yaml"
+    database-change-log-table: db_changelog
+    database-change-log-lock-table: db_changelog_lock
