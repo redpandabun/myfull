@@ -7,3 +7,13 @@ spring:
   threads:
     virtual:
       enabled: true
+  datasource:
+    url: "jdbc:postgresql://${MY_DB_HOST}:${MY_DB_PORT:5432}/${MY_DB_NAME}?currentSchema=${MY_DB_SCHEMA:public}&sslmode=require"
+    username: ${MY_DB_USERNAME}
+    password: ${MY_DB_PASSWORD}
+  jpa:
+    show-sql: false
+    open-in-view: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate

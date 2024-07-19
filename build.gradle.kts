@@ -9,6 +9,7 @@ plugins {
 
 dependencies {
   implementation(libs.bundles.api)
+  runtimeOnly(libs.bundles.runtime)
   developmentOnly(libs.bundles.dev)
   testImplementation(libs.bundles.test)
 }
