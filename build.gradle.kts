@@ -56,6 +56,7 @@ spotless {
 
 tasks {
   test {
+    systemProperties["spring.profiles.active"] = "test"
     useJUnitPlatform()
   }
 }

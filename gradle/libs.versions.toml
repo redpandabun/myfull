@@ -34,6 +34,7 @@ spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-star
 spring-dotenv = { module = "me.paulschwarz:spring-dotenv", version.ref = "spring-dotenv" }
 
 postgresql = { module = "org.postgresql:postgresql" }
+h2 = { module = "com.h2database:h2" }
 
 [bundles]
 api = [
@@ -55,5 +56,6 @@ dev = [
 
 test = [
   "kotlin-test",
-  "spring-boot-starter-test"
+  "spring-boot-starter-test",
+  "h2"
 ]
