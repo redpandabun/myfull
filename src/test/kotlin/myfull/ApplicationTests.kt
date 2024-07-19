@@ -7,7 +7,6 @@ import kotlin.test.assertNotNull
 
 @SpringBootTest
 class ApplicationTests {
-
   @Test
   fun contextLoads(ctx: ApplicationContext) {
     assertNotNull(ctx.id)
