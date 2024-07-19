@@ -29,7 +29,9 @@ kover {
   reports {
     filters {
       excludes {
-        classes("myfull.ApplicationKt") // exclude main method
+        // exclude main method
+        classes("myfull.ApplicationKt")
+        annotatedBy("org.springframework.boot.autoconfigure.SpringBootApplication")
       }
     }
     verify {
