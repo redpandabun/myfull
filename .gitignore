@@ -1,3 +1,7 @@
+### Locale environment ###
+.env*
+!.env.sample
+
 ### Gradle ###
 .gradle/
 build/
