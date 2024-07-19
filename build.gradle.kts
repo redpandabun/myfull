@@ -41,6 +41,7 @@ kover {
       excludes {
         // exclude main method
         classes("myfull.ApplicationKt")
+        annotatedBy("org.springframework.context.annotation.Configuration")
         annotatedBy("org.springframework.boot.autoconfigure.SpringBootApplication")
       }
     }
