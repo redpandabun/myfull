@@ -1,9 +1,14 @@
 plugins {
   alias(libs.plugins.kotlin)
+  alias(libs.plugins.kotlin.spring)
+
+  alias(libs.plugins.spring.boot)
+  alias(libs.plugins.spring.dependency.management)
 }
 
 dependencies {
   implementation(libs.bundles.api)
+  developmentOnly(libs.bundles.dev)
   testImplementation(libs.bundles.test)
 }
 
@@ -14,7 +19,9 @@ java {
 }
 
 kotlin {
-  compilerOptions {}
+  compilerOptions {
+    freeCompilerArgs = properties["kotlin.compiler.free-args"]!!.toString().split(" ")
+  }
 }
 
 tasks {
