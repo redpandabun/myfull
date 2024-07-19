@@ -2,7 +2,7 @@ plugins {
   alias(libs.plugins.kotlin)
   alias(libs.plugins.kotlin.spring)
   alias(libs.plugins.kotlinx.kover)
-
+  alias(libs.plugins.spotless)
   alias(libs.plugins.spring.boot)
   alias(libs.plugins.spring.dependency.management)
 }
@@ -37,6 +37,17 @@ kover {
         minBound(80)
       }
     }
+  }
+}
+
+spotless {
+  kotlin {
+    ktlint()
+  }
+
+  kotlinGradle {
+    target("*.gradle.kts")
+    ktlint()
   }
 }
 
