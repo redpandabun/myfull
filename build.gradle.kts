@@ -1,6 +1,7 @@
 plugins {
   alias(libs.plugins.kotlin)
   alias(libs.plugins.kotlin.spring)
+  alias(libs.plugins.kotlinx.kover)
 
   alias(libs.plugins.spring.boot)
   alias(libs.plugins.spring.dependency.management)
@@ -21,6 +22,21 @@ java {
 kotlin {
   compilerOptions {
     freeCompilerArgs = properties["kotlin.compiler.free-args"]!!.toString().split(" ")
+  }
+}
+
+kover {
+  reports {
+    filters {
+      excludes {
+        classes("myfull.ApplicationKt") // exclude main method
+      }
+    }
+    verify {
+      rule {
+        minBound(80)
+      }
+    }
   }
 }
 
