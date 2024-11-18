@@ -6,7 +6,7 @@ kotlin = "2.0.0"
 kotlin-logging = "7.0.0"
 kotlinx-kover = "0.8.2"
 spotless = "7.0.0.BETA1"
-spring-boot = "3.3.2"
+spring-boot = "3.3.5"
 spring-dependency-management = "1.1.6"
 spring-dotenv = "4.0.0"
 
