@@ -59,7 +59,7 @@ jobs:
       - name: Check test coverage
         run: ./gradlew koverXmlReport -x test
       - name: Upload test coverage report to CodeCov
-        uses: codecov/codecov-action@v4.0.1
+        uses: codecov/codecov-action@v4.6.0
         with:
           token: ${{secrets.CODECOV_TOKEN}}
   analyze:
